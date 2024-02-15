@@ -29,67 +29,152 @@
 				<StackPanel Grid.Row="0">
 					<Button  Background="Transparent" Content="=" Foreground="White" FontSize="50" Margin="0,5,0,0"></Button>
 					<Grid ColumnDefinitions="50,*">
-						<Button Grid.Column="1"  Background="Transparent" Content="Dashboard" Foreground="White" Margin="0,10,0,0"></Button>
-					</Grid>
-					<Grid ColumnDefinitions="50,*">
-						<Button Name="test"  Grid.Column="1" Background="Transparent" Content="Manage User" Foreground="White"  Margin="0,10,0,0" PointerEntered="Button_PointerEntered" PointerExited="Button_PointerExited" >
-
-							
-
-							
-							<i:Interaction.Behaviors>
-							
-								<ia:DataTriggerBehavior Binding="{Binding IsHovering}" ComparisonCondition="Equal" Value="true">
-									<!--<Button.Styles>
-										<Style Selector="test">
-											<Style.Animations>
-												<Animation Duration="0:0:0.2">
-													<KeyFrame Cue="100%">
-													</KeyFrame>
-
-												</Animation>
-											</Style.Animations>
-										</Style>
-									</Button.Styles>-->
-								</ia:DataTriggerBehavior>
-							</i:Interaction.Behaviors>
-							
-							
-							<!--<Button.Styles>
-								<Style Selector="Button:pointerover" >
-									<Style.Animations>
-										<Animation xDuration="0:0:0.2">
-											<KeyFrame Cue="100%">
-												<Setter Property="FontSize" Value="30">
-                                                       
-												</Setter>
-											</KeyFrame>
-										</Animation>
-									</Style.Animations>
+						<Button Grid.Column="1" Content="Dashboard">
+							<Button.Styles>
+								<Style Selector="Button">
+									<Setter Property="FontSize" Value="14" />
+									<Setter Property="Foreground" Value="White"/>
+									<Setter Property="Background" Value="Transparent"/>
 								</Style>
-							</Button.Styles>-->
+								<Style Selector="Button:pointerover">
+									<Setter Property="FontSize" Value="20" />
+								</Style>
+							</Button.Styles>
+							<Button.Transitions>
+								<Transitions>
+									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+								</Transitions>
+							</Button.Transitions>
 						</Button>
 					</Grid>
 
-					
-					
+
+
 					<Grid ColumnDefinitions="50,*">
-						<Button Grid.Column="1" Background="Transparent" Content="Manage Branch" Foreground="White" Margin="0,10,0,0"></Button>
+						<Button Grid.Column="1" Content="Manage User">
+							<Button.Styles>
+								<Style Selector="Button">
+									<Setter Property="FontSize" Value="14" />
+									<Setter Property="Foreground" Value="White"/>
+									<Setter Property="Background" Value="Transparent"/>
+								</Style>
+								<Style Selector="Button:pointerover">
+									<Setter Property="FontSize" Value="20" />
+								</Style>
+							</Button.Styles>
+							<Button.Transitions>
+								<Transitions>
+									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+								</Transitions>
+							</Button.Transitions>
+						</Button>
 					</Grid>
+
+
+
 					<Grid ColumnDefinitions="50,*">
-						<Button Grid.Column="1"  Background="Transparent" Content="Manage Area" Foreground="White" Margin="0,10,0,0"></Button>
+						<Button Grid.Column="1" Content="Manage Branch">
+							<Button.Styles>
+								<Style Selector="Button">
+									<Setter Property="FontSize" Value="14" />
+									<Setter Property="Foreground" Value="White"/>
+									<Setter Property="Background" Value="Transparent"/>
+								</Style>
+								<Style Selector="Button:pointerover">
+									<Setter Property="FontSize" Value="20" />
+								</Style>
+							</Button.Styles>
+							<Button.Transitions>
+								<Transitions>
+									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+								</Transitions>
+							</Button.Transitions>
+						</Button>
 					</Grid>
+
+
 					<Grid ColumnDefinitions="50,*">
-						<Button Grid.Column="1"  Background="Transparent" Content="Manage Department" Foreground="White" Margin="0,10,0,0"></Button>
+						<Button Grid.Column="1" Content="Manage Area">
+							<Button.Styles>
+								<Style Selector="Button">
+									<Setter Property="FontSize" Value="14" />
+									<Setter Property="Foreground" Value="White"/>
+									<Setter Property="Background" Value="Transparent"/>
+								</Style>
+								<Style Selector="Button:pointerover">
+									<Setter Property="FontSize" Value="20" />
+								</Style>
+							</Button.Styles>
+							<Button.Transitions>
+								<Transitions>
+									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+								</Transitions>
+							</Button.Transitions>
+						</Button>
 					</Grid>
+
 					<Grid ColumnDefinitions="50,*">
-						<Button Grid.Column="1"  Background="Transparent" Content="Manage Portal" Foreground="White" Margin="0,10,0,0"></Button>
+						<Button Grid.Column="1" Content="Manage Department">
+							<Button.Styles>
+								<Style Selector="Button">
+									<Setter Property="FontSize" Value="14" />
+									<Setter Property="Foreground" Value="White"/>
+									<Setter Property="Background" Value="Transparent"/>
+								</Style>
+								<Style Selector="Button:pointerover">
+									<Setter Property="FontSize" Value="20" />
+								</Style>
+							</Button.Styles>
+							<Button.Transitions>
+								<Transitions>
+									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+								</Transitions>
+							</Button.Transitions>
+						</Button>
 					</Grid>
+
+
+					<Grid ColumnDefinitions="50,*">
+						<Button Grid.Column="1" Content="Manage Portal">
+							<Button.Styles>
+								<Style Selector="Button">
+									<Setter Property="FontSize" Value="14" />
+									<Setter Property="Foreground" Value="White"/>
+									<Setter Property="Background" Value="Transparent"/>
+								</Style>
+								<Style Selector="Button:pointerover">
+									<Setter Property="FontSize" Value="20" />
+								</Style>
+							</Button.Styles>
+							<Button.Transitions>
+								<Transitions>
+									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+								</Transitions>
+							</Button.Transitions>
+						</Button>
+					</Grid>
+
+
 				</StackPanel>
 
 				<Grid ColumnDefinitions="50,*" Grid.Row="1">
-					<Button Grid.Column="1"  Background="Transparent" Content="Change Password" Foreground="White" Margin="0,10,0,0"></Button>
-				</Grid>
+					<Button Grid.Column="1" Content="Change Password">
+						<Button.Styles>
+							<Style Selector="Button">
+								<Setter Property="FontSize" Value="14" />
+								<Setter Property="Foreground" Value="White"/>
+								<Setter Property="Background" Value="Transparent"/>
+							</Style>
+							<Style Selector="Button:pointerover">
+								<Setter Property="FontSize" Value="20" />
+							</Style>
+						</Button.Styles>
+						<Button.Transitions>
+							<Transitions>
+								<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+							</Transitions>
+						</Button.Transitions>
+					</Button>				</Grid>
 			</Grid>
 		
 		</Border>		
