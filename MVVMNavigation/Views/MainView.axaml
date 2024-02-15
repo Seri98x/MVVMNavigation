@@ -25,29 +25,89 @@
 
 	<Grid ColumnDefinitions="300,*">
 		<Border Grid.Column="0" Background="#1b263b" CornerRadius="0,20,20,0">
+			
 			<Grid RowDefinitions="*,100">
 				<StackPanel Grid.Row="0">
+				
 					<Button  Background="Transparent" Content="=" Foreground="White" FontSize="50" Margin="0,5,0,0"></Button>
+					
+					
+					<!--Image Button Main Container-->
 					<Grid ColumnDefinitions="50,*">
-						<Button Grid.Column="1" Content="Dashboard">
+						
+						<!--Button-->
+						<Button Grid.Column="1" >
+							
+							<!--Button Content-->
+							<Grid ColumnDefinitions="20,*">
+								<Image  Source="/Assets/dashboard.png">	
+									<Image.Styles>
+										
+										<Style Selector="Image">
+											<Setter Property="Width" Value="20"/>
+										</Style>
+										
+										<Style Selector="Image:pointerover">
+											<Setter Property="Width" Value="50"/>
+										</Style>
+										
+									</Image.Styles>
+									
+									<Image.Transitions>
+										
+										<Transitions>
+											<DoubleTransition Property="Width" Duration="0:0:0.09" />
+										</Transitions>
+										
+									</Image.Transitions>
+									
+								</Image>
+							
+								<TextBlock Grid.Column="1" Text="Dashboard" VerticalAlignment="Center" Margin="10,0,0,0">
+									
+								</TextBlock>
+								
+							</Grid>
+							
 							<Button.Styles>
+								
 								<Style Selector="Button">
 									<Setter Property="FontSize" Value="14" />
 									<Setter Property="Foreground" Value="White"/>
 									<Setter Property="Background" Value="Transparent"/>
 								</Style>
+								
 								<Style Selector="Button:pointerover">
 									<Setter Property="FontSize" Value="20" />
+									<Setter Property="Background" Value="Gainsboro" />
+								
 								</Style>
+								
+								<Style Selector="Button:pointerover /template/ ContentPresenter">
+									<Setter Property="Background" Value="Gainsboro" />
+									
+								</Style>
+								
+								<Style Selector="Button:pointerover > Grid > Image">
+									
+									<Setter Property="Width" Value="30"/>
+								</Style>		
+								
 							</Button.Styles>
+							
 							<Button.Transitions>
+								
 								<Transitions>
 									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+									<BrushTransition Property="Background" Duration="0:0:0.2" />
 								</Transitions>
+								
 							</Button.Transitions>
+							
 						</Button>
+					
 					</Grid>
-
+				
 
 
 					<Grid ColumnDefinitions="50,*">
@@ -176,7 +236,7 @@
 						</Button.Transitions>
 					</Button>				</Grid>
 			</Grid>
-		
+		 
 		</Border>		
 	</Grid>
 
