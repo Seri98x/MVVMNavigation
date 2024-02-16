@@ -5,7 +5,7 @@
 			 xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
              xmlns:ia="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
              xmlns:vm="clr-namespace:MVVMNavigation.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="MVVMNavigation.Views.MainView"
              x:DataType="vm:MainViewModel"
 			 Background="#03071e"
@@ -33,23 +33,23 @@
 					
 					
 					<!--Image Button Main Container-->
-					<Grid ColumnDefinitions="50,*">
+					<Grid ColumnDefinitions="50,*" Margin="-20,10,0,15">
 						
 						<!--Button-->
 						<Button Grid.Column="1" >
 							
 							<!--Button Content-->
 							<Grid ColumnDefinitions="20,*">
-								<Image  Source="/Assets/dashboard.png">	
+								<Image  >	
 									<Image.Styles>
 										
 										<Style Selector="Image">
 											<Setter Property="Width" Value="20"/>
+											<Setter Property="OpacityMask"  Value="Black"/>
+											<Setter Property="Source" Value="/Assets/dashboard.png"/>
 										</Style>
 										
-										<Style Selector="Image:pointerover">
-											<Setter Property="Width" Value="50"/>
-										</Style>
+										
 										
 									</Image.Styles>
 									
@@ -57,6 +57,7 @@
 										
 										<Transitions>
 											<DoubleTransition Property="Width" Duration="0:0:0.09" />
+											<BrushTransition Property="OpacityMask" Duration="0:0:0.09" />
 										</Transitions>
 										
 									</Image.Transitions>
@@ -79,19 +80,28 @@
 								
 								<Style Selector="Button:pointerover">
 									<Setter Property="FontSize" Value="20" />
+									<Setter Property="Foreground" Value="Black"/>
+
 									<Setter Property="Background" Value="Gainsboro" />
 								
 								</Style>
 								
 								<Style Selector="Button:pointerover /template/ ContentPresenter">
 									<Setter Property="Background" Value="Gainsboro" />
-									
+
 								</Style>
 								
 								<Style Selector="Button:pointerover > Grid > Image">
 									
 									<Setter Property="Width" Value="30"/>
-								</Style>		
+
+									<Setter Property="Source" Value="/Assets/dashboard-black.png"/>
+
+								</Style>	
+									
+								
+
+									
 								
 							</Button.Styles>
 							
@@ -107,117 +117,400 @@
 						</Button>
 					
 					</Grid>
+
+
+
+	 				<Grid ColumnDefinitions="50,*" Margin="-20,0,0,15">
+
+						<!--Button-->
+						<Button Grid.Column="1" >
+
+							<!--Button Content-->
+							<Grid ColumnDefinitions="20,*">
+								
+								<!--Image of the button-->
+								<Image >
+									<Image.Styles>
+
+										<Style Selector="Image">
+											<Setter Property="Width" Value="20"/>
+											<Setter Property="Source" Value="/Assets/user.png"/>
+										</Style>
+
+									</Image.Styles>
+
+									<Image.Transitions>
+
+										<Transitions>
+											<DoubleTransition Property="Width" Duration="0:0:0.09" />
+										</Transitions>
+
+									</Image.Transitions>
+
+								</Image>
+								
+								<!--Text inside the button-->
+
+								<TextBlock Grid.Column="1" Text="Manage User" VerticalAlignment="Center" Margin="10,0,0,0">
+
+								</TextBlock>
+
+							</Grid>
+
+							<Button.Styles>
+
+								<Style Selector="Button">
+									<Setter Property="FontSize" Value="14" />
+									<Setter Property="Foreground" Value="White"/>
+									<Setter Property="Background" Value="Transparent"/>
+								</Style>
+
+								<Style Selector="Button:pointerover">
+									<Setter Property="FontSize" Value="20" />
+									<Setter Property="Background" Value="Gainsboro" />
+
+								</Style>
+
+								<Style Selector="Button:pointerover /template/ ContentPresenter">
+									<Setter Property="Background" Value="Gainsboro" />
 				
+								</Style>
+
+								<Style Selector="Button:pointerover > Grid > Image">
+                                       
+									<Setter Property="Width" Value="30"/>
+							        <Setter Property="Source" Value="/Assets/user-black.png"/>
+									
+										
+								</Style>
+
+							</Button.Styles>
+
+							<Button.Transitions>
+
+								<Transitions>
+									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+									<BrushTransition Property="Background" Duration="0:0:0.2" />
+								</Transitions>
+
+							</Button.Transitions>
+
+						</Button>
+
+					</Grid>
+  
 
 
-					<Grid ColumnDefinitions="50,*">
-						<Button Grid.Column="1" Content="Manage User">
+
+
+					<Grid ColumnDefinitions="50,*" Margin="-20,0,0,15">
+
+						<!--Button-->
+						<Button Grid.Column="1" >
+
+							<!--Button Content-->
+							<Grid ColumnDefinitions="20,*">
+
+								<!--Image of the button-->
+								<Image  Source="/Assets/branch.png">
+									<Image.Styles>
+
+										<Style Selector="Image">
+											<Setter Property="Width" Value="20"/>
+										</Style>
+
+									</Image.Styles>
+
+									<Image.Transitions>
+
+										<Transitions>
+											<DoubleTransition Property="Width" Duration="0:0:0.09" />
+										</Transitions>
+
+									</Image.Transitions>
+
+								</Image>
+
+								<!--Text inside the button-->
+
+								<TextBlock Grid.Column="1" Text="Manage Branch" VerticalAlignment="Center" Margin="10,0,0,0">
+
+								</TextBlock>
+
+							</Grid>
+
 							<Button.Styles>
+
 								<Style Selector="Button">
 									<Setter Property="FontSize" Value="14" />
 									<Setter Property="Foreground" Value="White"/>
 									<Setter Property="Background" Value="Transparent"/>
 								</Style>
+
 								<Style Selector="Button:pointerover">
 									<Setter Property="FontSize" Value="20" />
+									<Setter Property="Background" Value="Gainsboro" />
+
 								</Style>
+
+								<Style Selector="Button:pointerover /template/ ContentPresenter">
+									<Setter Property="Background" Value="Gainsboro" />
+
+								</Style>
+
+								<Style Selector="Button:pointerover > Grid > Image">
+
+									<Setter Property="Width" Value="30"/>
+								</Style>
+
 							</Button.Styles>
+
 							<Button.Transitions>
+
 								<Transitions>
 									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+									<BrushTransition Property="Background" Duration="0:0:0.2" />
 								</Transitions>
+
 							</Button.Transitions>
+
 						</Button>
+
 					</Grid>
 
 
 
-					<Grid ColumnDefinitions="50,*">
-						<Button Grid.Column="1" Content="Manage Branch">
+					<Grid ColumnDefinitions="50,*" Margin="-20,0,0,15">
+
+						<!--Button-->
+						<Button Grid.Column="1" >
+
+							<!--Button Content-->
+							<Grid ColumnDefinitions="20,*">
+
+								<!--Image of the button-->
+								<Image  Source="/Assets/area.png">
+									<Image.Styles>
+
+										<Style Selector="Image">
+											<Setter Property="Width" Value="20"/>
+										</Style>
+
+									</Image.Styles>
+
+									<Image.Transitions>
+
+										<Transitions>
+											<DoubleTransition Property="Width" Duration="0:0:0.09" />
+										</Transitions>
+
+									</Image.Transitions>
+
+								</Image>
+
+								<!--Text inside the button-->
+
+								<TextBlock Grid.Column="1" Text="Manage Area" VerticalAlignment="Center" Margin="10,0,0,0">
+
+								</TextBlock>
+
+							</Grid>
+
 							<Button.Styles>
+
 								<Style Selector="Button">
 									<Setter Property="FontSize" Value="14" />
 									<Setter Property="Foreground" Value="White"/>
 									<Setter Property="Background" Value="Transparent"/>
 								</Style>
+
 								<Style Selector="Button:pointerover">
 									<Setter Property="FontSize" Value="20" />
+									<Setter Property="Background" Value="Gainsboro" />
+
 								</Style>
+
+								<Style Selector="Button:pointerover /template/ ContentPresenter">
+									<Setter Property="Background" Value="Gainsboro" />
+
+								</Style>
+
+								<Style Selector="Button:pointerover > Grid > Image">
+
+									<Setter Property="Width" Value="30"/>
+								</Style>
+
 							</Button.Styles>
+
 							<Button.Transitions>
+
 								<Transitions>
 									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+									<BrushTransition Property="Background" Duration="0:0:0.2" />
 								</Transitions>
+
 							</Button.Transitions>
+
 						</Button>
+
 					</Grid>
 
 
-					<Grid ColumnDefinitions="50,*">
-						<Button Grid.Column="1" Content="Manage Area">
+					<Grid ColumnDefinitions="50,*" Margin="-20,0,0,15">
+
+						<!--Button-->
+						<Button Grid.Column="1" >
+
+							<!--Button Content-->
+							<Grid ColumnDefinitions="20,*">
+
+								<!--Image of the button-->
+								<Image  Source="/Assets/department.png">
+									<Image.Styles>
+
+										<Style Selector="Image">
+											<Setter Property="Width" Value="20"/>
+										</Style>
+
+									</Image.Styles>
+
+									<Image.Transitions>
+
+										<Transitions>
+											<DoubleTransition Property="Width" Duration="0:0:0.09" />
+										</Transitions>
+
+									</Image.Transitions>
+
+								</Image>
+
+								<!--Text inside the button-->
+
+								<TextBlock Grid.Column="1" Text="Manage Department" VerticalAlignment="Center" Margin="10,0,0,0">
+
+								</TextBlock>
+
+							</Grid>
+
 							<Button.Styles>
+
 								<Style Selector="Button">
 									<Setter Property="FontSize" Value="14" />
 									<Setter Property="Foreground" Value="White"/>
 									<Setter Property="Background" Value="Transparent"/>
 								</Style>
+
 								<Style Selector="Button:pointerover">
 									<Setter Property="FontSize" Value="20" />
+									<Setter Property="Background" Value="Gainsboro" />
+
 								</Style>
+
+								<Style Selector="Button:pointerover /template/ ContentPresenter">
+									<Setter Property="Background" Value="Gainsboro" />
+
+								</Style>
+
+								<Style Selector="Button:pointerover > Grid > Image">
+
+									<Setter Property="Width" Value="30"/>
+								</Style>
+
 							</Button.Styles>
+
 							<Button.Transitions>
+
 								<Transitions>
 									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+									<BrushTransition Property="Background" Duration="0:0:0.2" />
 								</Transitions>
+
 							</Button.Transitions>
+
 						</Button>
+
 					</Grid>
 
-					<Grid ColumnDefinitions="50,*">
-						<Button Grid.Column="1" Content="Manage Department">
+
+					<Grid ColumnDefinitions="50,*" Margin="-20,0,0,15">
+
+						<!--Button-->
+						<Button Grid.Column="1" >
+
+							<!--Button Content-->
+							<Grid ColumnDefinitions="20,*">
+
+								<!--Image of the button-->
+								<Image  Source="/Assets/portal.png">
+									<Image.Styles>
+
+										<Style Selector="Image">
+											<Setter Property="Width" Value="20"/>
+										</Style>
+
+									</Image.Styles>
+
+									<Image.Transitions>
+
+										<Transitions>
+											<DoubleTransition Property="Width" Duration="0:0:0.09" />
+										</Transitions>
+
+									</Image.Transitions>
+
+								</Image>
+
+								<!--Text inside the button-->
+
+								<TextBlock Grid.Column="1" Text="Manage Portal" VerticalAlignment="Center" Margin="10,0,0,0">
+
+								</TextBlock>
+
+							</Grid>
+
 							<Button.Styles>
+
 								<Style Selector="Button">
 									<Setter Property="FontSize" Value="14" />
 									<Setter Property="Foreground" Value="White"/>
 									<Setter Property="Background" Value="Transparent"/>
 								</Style>
+
 								<Style Selector="Button:pointerover">
 									<Setter Property="FontSize" Value="20" />
+									<Setter Property="Background" Value="Gainsboro" />
+
 								</Style>
+
+								<Style Selector="Button:pointerover /template/ ContentPresenter">
+									<Setter Property="Background" Value="Gainsboro" />
+
+								</Style>
+
+								<Style Selector="Button:pointerover > Grid > Image">
+
+									<Setter Property="Width" Value="30"/>
+								</Style>
+
 							</Button.Styles>
+
 							<Button.Transitions>
+
 								<Transitions>
 									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
+									<BrushTransition Property="Background" Duration="0:0:0.2" />
 								</Transitions>
-							</Button.Transitions>
-						</Button>
-					</Grid>
 
-
-					<Grid ColumnDefinitions="50,*">
-						<Button Grid.Column="1" Content="Manage Portal">
-							<Button.Styles>
-								<Style Selector="Button">
-									<Setter Property="FontSize" Value="14" />
-									<Setter Property="Foreground" Value="White"/>
-									<Setter Property="Background" Value="Transparent"/>
-								</Style>
-								<Style Selector="Button:pointerover">
-									<Setter Property="FontSize" Value="20" />
-								</Style>
-							</Button.Styles>
-							<Button.Transitions>
-								<Transitions>
-									<DoubleTransition Property="FontSize" Duration="0:0:0.1" />
-								</Transitions>
 							</Button.Transitions>
+
 						</Button>
+
 					</Grid>
 
 
 				</StackPanel>
 
-				<Grid ColumnDefinitions="50,*" Grid.Row="1">
+				<Grid ColumnDefinitions="50,*" Grid.Row="1" >
 					<Button Grid.Column="1" Content="Change Password">
 						<Button.Styles>
 							<Style Selector="Button">
@@ -236,7 +529,7 @@
 						</Button.Transitions>
 					</Button>				</Grid>
 			</Grid>
-		 
+
 		</Border>		
 	</Grid>
 
